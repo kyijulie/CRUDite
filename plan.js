@@ -56,3 +56,44 @@ MVP+
 //different users
 
 
+PLAN FOR ITINERARY APP
+Today: 
+- Pseudocode/code the basic CrUDite abilities
+- Storing info and and retrieving them
+- Updating info and/or edit info
+- Delete individual logs
+- Delete whole itinerary
+-----------------------------------------
+Enter (text boxes for)
+- name
+- dates
+
+PULL UP A SHEET for Dates of Travel
+for each day 
+- have an option for time (12am - 11:00pm) by the hour
+- when that time is logged, have text boxes for 
+	- event
+	- event address
+	- event fee
+- save that log
+- have it printed on a temporary list 
+- give an option for deleting one log or deleting the whole list
+
+=========================================
+
+
+Tuesday:
+- Finish up code from yesterday
+- Sort the list by time
+- Make the website user friendly (think about how can I make this website better?)
+- implement calendar
+
+Wednesday:
+- Style it like crazy
+- attach pics?
+- refactor/clean up code
+
+Thursday:
+- have the list be only available to the user
+- save the previous logs
+- throw in an error statement when there are duplicates for time logs
