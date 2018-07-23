@@ -40,3 +40,16 @@ button:hover {
 }
 
 
+th {
+    text-align: left;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+.get-event {
+   height: 300px;
+   overflow: auto;
+}
+

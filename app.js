@@ -1,30 +1,49 @@
 $(document).ready(function() {
-console.log('+++ filename: app.js: jquery.ready exoected no error actual: ', $ );
+//console.log('+++ filename: app.js: jquery.ready exoected no error actual: ', $ );
 
-//attach event listener to buttons(input)
-//create function stub for read/write/delete
+//stores user name and date and prints out other text boxes
 $('.store-button').on('click', function(event) {
-	// event.preventDefault();
-	// event.stopPropagation(); //stops event from leaking into other listeners
-	// console.log(event.target.classList);
-	let titleValue = $('.input-title-field').val();
-    let codeValue = $('.input-code-field').val();
 
-	localStorage.setItem('titleValue', titleValue);
-	localStorage.setItem('codeValue', codeValue);
+	let nameValue = $('.input-name-field').val();
+    let dateValue = $('.input-date-field').val();
 
-    
+	localStorage.setItem('nameValue', nameValue);
+	localStorage.setItem('dateValue', dateValue);
+	$('.print-dates').show();
+
 });
 
+//prints date and details
 $('.get-button').on('click', function(event) {
-	// localStorage.getItem('booya');
-	let titleValue = localStorage.getItem('titleValue');
-	let codeValue = localStorage.getItem('codeValue'); //booya is the property
-	$('.debug').html(`<p>${titleValue} ${codeValue}</p>`);
+	let eventTime = $('.event-time').val();
+	let eventValue = $('.event').val();
+	let eventAdd = $('.event-address').val();
+	let eventFees = $('.event-fees').val();
+	localStorage.setItem('event-time', eventTime);
+	localStorage.setItem('event', eventValue);
+	localStorage.setItem('event-add', eventAdd);
+	localStorage.setItem('event-fees', eventFees);
+
+
+	let getEventDate = localStorage.getItem('dateValue');
+	let getEventTime = localStorage.getItem('event-time');
+	let getEvent = localStorage.getItem('event');
+	let getEventAdd = localStorage.getItem('event-add');
+	let getEventFee = localStorage.getItem('event-fees');
+	$('.event-table').append(`<tr class="my-event"><td>${getEventDate}</td> <td>${getEventTime}</td>
+	 						<td>${getEvent}</td><td>${getEventAdd}</td><td>${getEventFee}</td></tr>`)
+	$('.get-event').show();
+	$('.delete').show();
 });
 
+
+//deletes list
 $('.delete-button').on('click', function(event) {
-	console.log(localStorage.removeItem('booya')); //deletes given property
+	localStorage.removeItem('event-time');
+	localStorage.removeItem('event');
+	localStorage.removeItem('event-add');
+	localStorage.removeItem('event-fees');
+	$('.my-event').remove();
 });
 
 });
