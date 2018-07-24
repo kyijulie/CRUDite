@@ -84,7 +84,7 @@ for each day
 
 Tuesday:
 - Finish up code from yesterday
-- Sort the list by time
+- Sort the list by time when it gets logged? or when printed out at the end?
 - Make the website user friendly (think about how can I make this website better?)
 - implement calendar
 

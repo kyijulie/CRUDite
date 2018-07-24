@@ -14,6 +14,7 @@ button {
   width: 150px;
   margin: 1px;
   height: 25px;
+  background-color: white;
 }
 
 button:click {
@@ -22,20 +23,41 @@ button:click {
 
 button:hover {
   cursor: pointer;
-  background-color: #e0e1e2;
+  background-color: dodgerblue;
 
 }
 
 
+header .main{
+	height: 100px;
+	display: flex;
+	justify-content: center;
+}
 
-.input-title-field {
+header .get-dates {
+	display: flex;
+	justify-content: center;
+}
+
+header .enter-button{
+	display: flex;
+	justify-content: center;
+}
+
+body {
+	background-image: url(POLAROID_HEADER.png);
+}
+
+
+
+.input-name-field {
  height: 50px;
  font-size: 16px;
 }
 
 
-.input-code-field {
- height: 100px;
+.input-location-field {
+ height: 50px;
  font-size: 16px;
 }
 
@@ -48,8 +70,25 @@ table, th, td {
     border: 1px solid black;
 }
 
-.get-event {
+#print-table {
+   visibility: hidden;
    height: 300px;
+   margin-left: 80px;
+   margin-right: 80px;
    overflow: auto;
+}
+
+#add{
+	visibility: hidden;
+	float: left;
+	margin-left: 80px;
+	/*display: flex;
+	justify-content: flex-end;*/
+}
+
+#final {
+	visibility: hidden;
+	float: right;
+	margin-right: 80px;
 }
 

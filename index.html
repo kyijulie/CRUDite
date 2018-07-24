@@ -6,41 +6,50 @@
       src="https://code.jquery.com/jquery-3.3.1.js"
       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
       crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="style.css">
+      
       <script src="app.js"></script>
+      <link rel="stylesheet" href="style.css">
+
   </head>
 
   <body>
-    <div class="get-dates">
-	<input class="input-name-field" type="text">
-	<input class="input-date-field" type="date">
-	<button class="store-button">Enter</button>
-	</div>
+    <header>
+      <h1 class='main'>text goes here</h1>
+      <br>
+        <div class="get-dates">
+          <input id="name" class="input-name-field" type="text" placeholder="NAME">
+          <input id="title" class="input-location-field" type="text" placeholder="LOCATION">
+        </div>
+        <div class='enter-button'>
+          <button class="store-button">Enter</button>
+        </div>
+    </header>
+
+
 	<br>
 
-  	<div hidden class="print-dates">
-	<input class='event-time' type="time">
-	<input class="event" type="text">
-	<input class="event-address" type="text">
-	<input class="event-fees" type="text">
-	
-	<button class="get-button">Add</button>
+  	<div class="print-table" id="print-table">
+      <table class="event-table" style="width:100%">
+        <tr>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Event</th>
+          <th>Address</th>
+          <th>Fees</th>
+          <th></th>
+        </tr>
+      </table>
+
     </div>
 
-    <div hidden class="get-event">
-    	<table class="event-table" style="width:50%">
-    		<tr>
-    			<th>Date</th>
-    			<th>Time</th>
-    			<th>Event</th>
-    			<th>Address</th>
-    			<th>Fees</th>
-    		</tr>
-    
+    <div class='add' id='add'>
+      <button class="add-button">Add</button>
+      <button class="delete-button">Delete Selected</button>
     </div>
-    <div hidden class="delete">
-    <button class="delete-button">Delete List</button>
-	</div>
+
+    <div class='final' id='final'>
+      <button class='final-button'>Done</button>
+    </div>
+
   </body>
-
 </html>
