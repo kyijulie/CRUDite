@@ -9,16 +9,19 @@
       
       <script src="app.js"></script>
       <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
 
   </head>
 
   <body>
     <header>
-      <h1 class='main'>text goes here</h1>
+      <h1 class='main'>TRAVELOG</h1>
       <br>
         <div class="get-dates">
           <input id="name" class="input-name-field" type="text" placeholder="NAME">
           <input id="title" class="input-location-field" type="text" placeholder="LOCATION">
+
         </div>
         <div class='enter-button'>
           <button class="store-button">Enter</button>
@@ -29,17 +32,18 @@
 	<br>
 
   	<div class="print-table" id="print-table">
-      <table class="event-table" style="width:100%">
+      <form>
+      <table id="event-table" class="event-table" style="width:100%">
         <tr>
-          <th>Date</th>
-          <th>Time</th>
-          <th>Event</th>
-          <th>Address</th>
-          <th>Fees</th>
-          <th></th>
+          <th width='5%'>Date</th>
+          <th width = '5%'>Time</th>
+          <th width = '40%'>Event</th>
+          <th width='40%'>Address</th>
+          <th width='5%'>Fees</th>
+          <th width = '5%'></th>
         </tr>
       </table>
-
+      </form>
     </div>
 
     <div class='add' id='add'>
@@ -48,7 +52,7 @@
     </div>
 
     <div class='final' id='final'>
-      <button class='final-button'>Done</button>
+      <button type="submit" class='final-button'>Done</button>
     </div>
 
   </body>
