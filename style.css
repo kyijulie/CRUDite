@@ -1,20 +1,11 @@
-/*.container { 
-	display: flex;
-	justify-content: center;
-	flex-flow: row-wrap;
-}
-
-.content-display {
-
-}
-*/
 
 button {
-  border-radius: 3px;
+  border-radius: 50px;
   width: 150px;
   margin: 1px;
   height: 25px;
-  background-color: white;
+  background-color: transparent;
+  color: white;
 }
 
 button:click {
@@ -23,7 +14,7 @@ button:click {
 
 button:hover {
   cursor: pointer;
-  background-color: dodgerblue;
+  background-color: #808B96;
 
 }
 
@@ -35,30 +26,43 @@ header .main{
 	height: 50px;
 	display: flex;
 	justify-content: center;
-	
-	font-size: 70px;
+	color: white;
+	font-size: 200px;
 
 }
 
-header .get-dates {
+.page_1_header {
+	height: 100px;
+	background: linear-gradient(to right, #808B96, #1C2833  );
+}
+
+.page_1_header h1 {
+	margin: 0;
+	margin-left: 80px;
+	padding-top: 20px;
+}
+
+ .get-dates {
 	display: flex;
 	justify-content: center;
-/*	padding-top: 200px;*/
+ 	padding-top: 200px;
 }
 
-header .enter-button{
+ .enter-button{
 	display: flex;
 	justify-content: center;
 }
 
 body {
     height: 100%;
-    background-image: url(IMG/explore.jpg);
+    background-image: url(IMG/NY.gif);
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
     background-attachment: fixed;
     font-family: 'Shadows Into Light', cursive;
+    padding: 0;
+    margin: 0;
 
 }
 
@@ -76,7 +80,7 @@ body {
 
 
 th {
-	background-color: #C0392B;
+	background-color: #f5f5f5;
     text-align: left;
 }
 
@@ -86,23 +90,23 @@ table, th, td {
 
 }
 
+
 tr {
 	background-color: #f5f5f5;
 }
 
-td {
-}
+
 
 #print-table {
-   visibility: hidden;
    height: 300px;
    margin-left: 80px;
    margin-right: 80px;
+   margin-top: 30px;
+   margin-bottom: 20px;
    overflow: auto;
 }
 
 #add{
-	visibility: hidden;
 	float: left;
 	margin-left: 80px;
 	/*display: flex;
@@ -114,4 +118,5 @@ td {
 	float: right;
 	margin-right: 80px;
 }
+
 

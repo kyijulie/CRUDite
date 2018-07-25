@@ -2,23 +2,23 @@ $(document).ready(function() {
 	//console.log('+++ filename: app.js: jquery.ready exoected no error actual: ', $ );
 
 	let count = 0;
-	//stores user name and title for the trip and pops out a table
+	//stores user name and title for the trip on the main page
 	$('.store-button').on('click', function(event) {
 
 		let nameValue = $('.input-name-field').val();
 	    let locationValue = $('.input-location-field').val();
 
 		localStorage.setItem('nameValue', nameValue);
-		localStorage.setItem('titleValue', locationValue);
-		$('.get-dates').html(`${nameValue}'s ${locationValue} Travel Log`)
-		$('.enter-button').hide();
-		document.getElementById('add').style.visibility="visible"
-		document.getElementById('print-table').style.visibility="visible"
-		$('.event-table').append("<tr class='event" + count + "'><td><input id='event-date" + count + "' type='date'></td><td><input id='event-time" + count + "' type='time'></td><td><input id='event" + count + "' type='text'></td><td><input id='event-address" + count + "' type='text'></td><td><input id='event-fees" + count + "' type='text'></td><td></td></tr>");
-
+		localStorage.setItem('locationValue', locationValue);
+		
+		window.location.href = 'page1.html';
+		
 
 	});
-
+	let getNameValue = localStorage.getItem('nameValue');
+	let getLocationValue = localStorage.getItem('locationValue');
+    $('.travelog').append(`${getNameValue}'s ${getLocationValue} Travelog`)
+    $('.event-table').append("<tr class='event" + count + "'><td><input id='event-date" + count + "' type='date'></td><td><input id='event-time" + count + "' type='time'></td><td><input id='event" + count + "' type='text'></td><td><input id='event-address" + count + "' type='text'></td><td><input id='event-fees" + count + "' type='text'></td><td></td></tr>");
 	//adds info to our list
 	$('.add-button').on('click', function(event) {
 
@@ -50,7 +50,7 @@ $(document).ready(function() {
 	});
 
 	function results(){
-		document.print();
+		window.print();
 	}
 	//print the travel log on another page?
 	$('.final-button').on('click', function(event){
