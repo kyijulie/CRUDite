@@ -50,8 +50,7 @@ $(document).ready(function() {
 	});
 
 	function results(){
-		var table = document.getElementById('print-table').value;
-		table.show();
+		document.print();
 	}
 	//print the travel log on another page?
 	$('.final-button').on('click', function(event){
